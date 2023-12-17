@@ -2,7 +2,11 @@
 
 <ul>
 <% @kittens.each do |kitten| %>
-    <li><%= link_to kitten.name, kitten %></li>
+    <li><strong><%= link_to kitten.name, kitten %></strong></li>
+    <%= link_to "Delete this kitten", kitten_path(kitten), data: {
+                                        turbo_method: :delete,
+                                        turbo_confirm: "Are you sure you want to delete this kitten?"
+    } %>
 <% end %>
 </ul>
 
