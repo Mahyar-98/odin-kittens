@@ -9,8 +9,8 @@
 
 <ul>
     <li><%= link_to "Edit this kitten", edit_kitten_path(@kitten) %></li>
-    <li><%= link_to "Delete this kitten", kitten_path(@kitten), data {
-                                        turbo_method: "delete",
+    <li><%= link_to "Delete this kitten", kitten_path(@kitten), data: {
+                                        turbo_method: :delete,
                                         turbo_confirm: "Are you sure you want to delete this kitten?"
     } %></li>
 </ul>
