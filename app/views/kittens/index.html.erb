@@ -1,0 +1,7 @@
+<h1>These are all the kittens you have: </h1>
+
+<ul>
+<% @kittens.each do |kitten| %>
+    <li><%= link_to kitten.name, kitten %></li>
+<% end %>
+</ul>
